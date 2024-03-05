@@ -16,13 +16,18 @@ struct ContentView: View {
             ],
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
-            .opacity(0.8)
+            .opacity(0.4)
             .ignoresSafeArea()
-            VStack {
-                
+            VStack (alignment : .leading) {
+                TitleView()
+                Spacer()
+                GreetingsSection()
+                Spacer()
+                Spacer()
             }
-            
-        }  
+            .padding(.horizontal)
+        }
+      
     }
 }
 

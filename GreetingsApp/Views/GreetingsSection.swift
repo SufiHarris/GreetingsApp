@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct GreetingsSection: View {
+    let greetings : [GreetingsDataModel] = [
+        .init(title: "How are you?", color: .green) ,
+        .init(title: "How is your family?", color: .gray),
+        .init(title: "Nice to hear,  that every thing is fine :)", color: .blue),
+        .init(title: "So , lets begin)", color: .yellow),
+    ]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (alignment : .leading){
+            ForEach(greetings) { greet in
+                GreetingView(title: greet.title, color: greet.color)
+            }
+        }
     }
 }
 

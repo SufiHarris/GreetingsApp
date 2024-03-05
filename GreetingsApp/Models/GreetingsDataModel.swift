@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct GreetingsDataModel : Identifiable {
+    let id = UUID()
+    let title : String
+    let color : Color
+}
